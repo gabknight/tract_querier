@@ -250,7 +250,7 @@ def save_tractography_file(
     if len(tracts_to_save) == 0:
         return
 
-    np.savetxt(filename[:-4] + "_ids.txt", tract_numbers)
+    np.savetxt(filename[:-4] + "_ids.txt", tract_numbers, fmt='%i')
 
     tracts_data_to_save = {}
     for key, data in tractography.original_tracts_data().items():
